@@ -243,6 +243,44 @@ img { max-width: 100%; display: block; }
   .contact-grid { grid-template-columns: 1fr; }
 }
 
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 0;      /* 👈 margin remove */
+  padding-bottom: 220px; /* 👈 extra space for cards */
+  min-height: 500px;     /* 👈 hero ki minimum height */
+  position: relative;
+}
+
+/* Card Stack Right Aligned */
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: 60px;   /* 👈 thoda door from corner */
+}
+
+.card-stack img {
+  max-width: 380px;     /* 👈 bada size for right side */
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Did You Know section */
+.stats-section {
+  margin-top: 40px;     /* 👈 extra safety */
+  position: relative;
+  z-index: 0;
+}
+
 
 
 

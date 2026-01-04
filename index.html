@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CyberSisco — Learn to Solve Cybercrime</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Top Banner -->
   <div class="top-banner">
-    <div class="container">
+    <div class="container banner-inner">
       <span>Join our Oct 1st Webinar: Live Demo on Cybersecurity</span>
       <a class="btn small" href="#contact">Save Your Seat</a>
     </div>
@@ -27,7 +25,12 @@
         <img src="logo.png" alt="Logo" class="brand-logo">
         <span>CyberSisco</span>
       </div>
-      <div class="nav-links">
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
         <a href="#products">Products</a>
         <a href="#solutions">Solutions</a>
         <a href="#activities">Activities</a>
@@ -49,7 +52,6 @@
       </div>
     </div>
 
-    <!-- Stacked Cards Hero -->
     <div class="hero-image card-stack">
       <img src="logo2.png" alt="Hero Showcase 1" class="card card-1">
       <img src="logo3.png" alt="hero Showcase 2" class="card card-2">
@@ -122,7 +124,7 @@
   <section id="activity" data-animate>
     <div class="container">
       <h2 class="section-title">Our Activity</h2>
-      <p style="text-align:center;color:var(--muted);margin-top:-20px;margin-bottom:40px;font-size:16px">Check out our latest posts, posters, and activities</p>
+      <p class="section-subtitle">Check out our latest posts, posters, and activities</p>
       <div class="cards">
         <div class="card"><img src="poster1.jpg" alt="Activity Poster 1"><h4>Cyber Awareness Drive</h4><p>Highlights from our recent awareness program.</p></div>
         <div class="card"><img src="poster2.jpg" alt="Activity Poster 2"><h4>Workshop Highlights</h4><p>Snapshots from our ethical hacking workshop.</p></div>
@@ -154,47 +156,44 @@
     </div>
   </section>
 
-    <!-- Social Feed -->
+  <!-- Social Feed -->
   <section id="social-feed" data-animate>
     <div class="container">
       <h2 class="section-title">हमारी Social Posts</h2>
-      <p style="text-align:center;color:var(--muted);margin-top:-10px;margin-bottom:24px">
-        Follow our updates on LinkedIn, Instagram & YouTube
-      </p>
+      <p class="section-subtitle">Follow our updates on LinkedIn, Instagram & YouTube</p>
+
       <div class="social-grid">
-        
-        <!-- LinkedIn -->
         <div class="social-column">
           <div class="social-card">
             <h4>LinkedIn</h4>
-            <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7378958381698641920?collapsed=1" target="_blank">
+            <a href="https://www.linkedin.com/embed/feed/update/urn:li:share:7378958381698641920?collapsed=1" target="_blank" rel="noreferrer">
               <img src="linkedin-preview1.jpg" alt="LinkedIn Post 1" class="social-img">
               <p>🔗 View our LinkedIn update #1</p>
             </a>
           </div>
+
           <div class="social-card">
             <h4>LinkedIn</h4>
-            <a href="https://www.linkedin.com/posts/cybersecurity-news_cybersecuritynews-whatsapp-activity-7378385142458998784-L6Rl" target="_blank">
+            <a href="https://www.linkedin.com/posts/cybersecurity-news_cybersecuritynews-whatsapp-activity-7378385142458998784-L6Rl" target="_blank" rel="noreferrer">
               <img src="linkedin-preview2.jpg" alt="LinkedIn Post 2" class="social-img">
               <p>🔗 View our LinkedIn update #2</p>
             </a>
           </div>
+
           <div class="social-card">
             <h4>LinkedIn</h4>
-            <a href="https://www.linkedin.com/posts/cybersisco_policelegacy-indianpoliceservice-lawwithlabs-activity-7378958383158263808-WGnF" target="_blank">
+            <a href="https://www.linkedin.com/posts/cybersisco_policelegacy-indianpoliceservice-lawwithlabs-activity-7378958383158263808-WGnF" target="_blank" rel="noreferrer">
               <img src="linkedin-preview3.jpg" alt="LinkedIn Post 3" class="social-img">
               <p>🔗 View our LinkedIn update #3</p>
             </a>
           </div>
         </div>
 
-        <!-- Instagram -->
         <div class="social-card">
           <h4>Instagram</h4>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOx0wIRj1lu/" data-instgrm-version="14"></blockquote>
         </div>
 
-        <!-- YouTube -->
         <div class="social-card">
           <h4>YouTube</h4>
           <div class="youtube-wrap">
@@ -205,83 +204,71 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" data-animate>
+  <!-- Contact (single, unique id) -->
+  <section id="contact" class="contact" data-animate>
     <div class="container">
       <h2 class="section-title">Contact</h2>
+
       <div class="contact-grid">
-        
-        <!-- Left Info -->
         <div class="contact-info">
           <p>✉️ <strong>Email</strong><br><a href="mailto:cybersisco.edu@gmail.com">cybersisco.edu@gmail.com</a></p>
           <p>📞 <strong>Phone</strong><br>+91 8173919410</p>
+
           <div class="map-wrap">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
 
-        <!-- ===== Contact Section Start ===== -->
-<section id="contact" style="padding: 60px 20px; background: #111; color: #fff; text-align: center;">
-  <h2 style="font-size: 2rem; margin-bottom: 20px;">Contact Us</h2>
+        <div class="contact-form-wrap">
+          <form action="https://formspree.io/f/xvgwrbqa" method="POST" id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
 
-  <form action="https://formspree.io/f/xvgwrbqa" method="POST" id="contact-form" 
-        style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
-    
-    <input type="text" name="name" placeholder="Your Name" required
-           style="padding: 12px; border: none; border-radius: 5px; outline: none; font-size: 1rem;">
-    
-    <input type="email" name="email" placeholder="Your Email" required
-           style="padding: 12px; border: none; border-radius: 5px; outline: none; font-size: 1rem;">
-    
-    <textarea name="message" placeholder="Your Message" required
-              style="padding: 12px; border: none; border-radius: 5px; outline: none; font-size: 1rem; min-height: 120px;"></textarea>
-    
-    <button type="submit"
-            style="background: #ff004f; color: #fff; padding: 12px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: 0.3s;">
-      Send Message
-    </button>
-  </form>
+            <p id="success-msg" class="form-msg success">Message sent successfully!</p>
+            <p id="error-msg" class="form-msg error">Oops, something went wrong.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Success / Error messages -->
-  <p id="success-msg" style="display:none; color:lightgreen; margin-top: 15px;">✅ Message sent successfully!</p>
-  <p id="error-msg" style="display:none; color:tomato; margin-top: 15px;">❌ Oops, something went wrong.</p>
-</section>
-<!-- ===== Contact Section End ===== -->
-
-<!-- JS for Form Handling -->
-<script>
-  const form = document.getElementById("contact-form");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      document.getElementById("success-msg").style.display = "block";
-      document.getElementById("error-msg").style.display = "none";
-      form.reset();
-    } else {
-      document.getElementById("error-msg").style.display = "block";
-      document.getElementById("success-msg").style.display = "none";
-    }
-  });
-</script>
-
-
-  <!-- Footer -->
-  <footer>
+  <footer class="footer">
     © 2025 CyberSisco — All rights reserved
   </footer>
 
-  <!-- Scripts -->
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.getElementById("navLinks");
+    toggle.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    // Formspree handler
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      });
+      document.getElementById("success-msg").style.display = res.ok ? "block" : "none";
+      document.getElementById("error-msg").style.display = res.ok ? "none" : "block";
+      if (res.ok) form.reset();
+    });
+  </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
   <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
+
 
 
 
